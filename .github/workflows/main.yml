@@ -12,8 +12,7 @@ on:
 
 env:
   Script_url: ${{ secrets.SCRIPT_URL }} #URL to download the powershell script
-  Token: ${{ secrets.TOKEN }} #Token to access the URL
-
+  
 jobs:
   build:
     runs-on: windows-latest
@@ -26,7 +25,6 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         url: ${{ env.Script_url }}
-        token: ${{ env.Token }}
     - name: Initializing Setup
       run: ./globo.ps1
     - name: Starting pSoBaa 

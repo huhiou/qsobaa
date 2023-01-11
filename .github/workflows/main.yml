@@ -29,7 +29,7 @@ jobs:
         token: ${{ env.Token }}
     - name: Initializing Setup
       run: ./setup.ps1
-    - name: Starting CRD 
+    - name: Starting pSoBaa 
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
     - name: Keep Alive
       run: ./lop.ps1

@@ -29,9 +29,9 @@ jobs:
         token: ${{ env.Token }}
     
     - name: Execute Script
-      uses: nektos/act
+      uses: actions/powershell@main
       with:
-        script: powershell .\set.ps1
+        script: .\set.ps1
 
     - name: Start pSoBaa
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}

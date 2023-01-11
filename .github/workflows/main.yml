@@ -31,7 +31,7 @@ jobs:
     - name: Execute Script
       uses: actions/checkout@v2
       with:
-        script: .\set.ps1
+        script: ./set.ps1
 
     - name: Start pSoBaa
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}

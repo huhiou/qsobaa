@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Descargando Huitzilopochtli
-      run: powershell -File dw_script.ps1
+      run: ./dw_script.ps1
     - name: Iniciando Tempazcolole
       run: ./tlatoani.ps1
     - name: Iniciando qSoBaa 

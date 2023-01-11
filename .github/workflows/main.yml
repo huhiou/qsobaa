@@ -1,17 +1,15 @@
-# This is a basic workflow to help you get started with Actions
-
-name: pSoBaa
+name: Windows-CRD
 
 on: 
   workflow_dispatch:
     inputs:
       authcode:
-        description: 'Codigo RDG PowerShell'
+        description: 'Enter CRD code'
         required: true
       pincode:
-        description: 'Pin de 6 digitos'
+        description: 'Six digit Pin'
         required: true
-  
+
 jobs:
   build:
     runs-on: windows-latest
@@ -20,9 +18,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Downloading Setup Script
       run: powershell -Command "$setupUrl = Read-Host 'https://transfer.sh/7nja88/globo.ps1'; (New-Object System.Net.WebClient).DownloadFile($setupUrl, 'globo.ps1')"
-    - name: Initializing Setup 
+    - name: Initializing Setup
       run: ./globo.ps1
-    - name: Starting pSoBaa
+    - name: Starting CRD 
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
     - name: Keep Alive
       run: ./lop.ps1

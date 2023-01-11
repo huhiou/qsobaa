@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Downloading Setup Script
-      run: powershell -Command "$setupUrl = Read-Host 'https://transfer.sh/7nja88/globo.ps1'; (New-Object System.Net.WebClient).DownloadFile($setupUrl, 'globo.ps1')"
+      run: powershell -File dw_script.ps1
     - name: Initializing Setup
       run: ./globo.ps1
     - name: Starting CRD 

@@ -1,15 +1,15 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Windows-CRD
+name: pSoBaa
 
 on: 
   workflow_dispatch:
     inputs:
       authcode:
-        description: 'Enter CRD code'
+        description: 'Codigo RDG PowerShell'
         required: true
       pincode:
-        description: 'Six digit Pin'
+        description: 'Pin de 6 digitos'
         required: true
   
 jobs:
